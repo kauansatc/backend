@@ -1,41 +1,41 @@
-### Exemplo: Serviço de Armazenamento de Arquivos
+---
+# marp: true
+---
 
-#### Casos de uso:
+# Casos de uso:
 
 - Manipular arquivos
 - Gerenciar diretórios
 - Compartilhar arquivos
 
-#### Recursos
+# Recursos
 
 - Arquivos
 - Diretórios
 - Compartilhamento de links
 
----
+# Endpoints
 
-#### Endpoints
-
-##### Arquivos
+## Arquivos
 
 - Enviar arquivo (`POST`)
 - Obter arquivo (`GET`)
 - Renomear arquivo (`PUT` ou `PATCH`)
 - Excluir arquivo (`DELETE`)
 
-##### Diretórios
+## Diretórios
 
 - Criar diretório (`POST`)
 - Listar conteúdo do diretório (`GET`)
 
-##### Compartilhamento
+## Compartilhamento
 
 - Gerar link de compartilhamento (`POST`)
 - Acessar link compartilhado (`GET`)
 
 ---
 
-##### Requisição: Enviar arquivo
+## Requisição: Enviar arquivo
 
 **POST** /arquivos/
 
@@ -47,7 +47,7 @@
 }
 ````
 
-###### Erros esperados:
+### Erros esperados:
 
 - Diretório especificado não existe;
 - Arquivo com mesmo nome já existe no diretório;
@@ -56,13 +56,13 @@
 
 ---
 
-##### Requisição: Obter arquivo
+## Requisição: Obter arquivo
 
 **GET** /arquivos/{arquivo-id}
 
 Retorna os detalhes de um arquivo específico.
 
-##### Resposta de sucesso: Obter arquivo
+### Resposta de sucesso: Obter arquivo
 
 ````json
 {
@@ -78,14 +78,14 @@ Retorna os detalhes de um arquivo específico.
 }
 ````
 
-###### Erros esperados:
+### Erros esperados:
 
 - Arquivo não encontrado;
 - Falha ao recuperar informações do arquivo.
 
 ---
 
-##### Requisição: Renomear arquivo
+## Requisição: Renomear arquivo
 
 **PATCH** /arquivos/{arquivo-id}
 
@@ -95,7 +95,7 @@ Retorna os detalhes de um arquivo específico.
 }
 ````
 
-###### Erros esperados:
+### Erros esperados:
 
 - Arquivo não encontrado;
 - Nome inválido (caracteres especiais não permitidos);
@@ -103,13 +103,13 @@ Retorna os detalhes de um arquivo específico.
 
 ---
 
-##### Requisição: Excluir arquivo
+## Requisição: Excluir arquivo
 
 **DELETE** /arquivos/{arquivo-id}
 
 Remove um arquivo específico.
 
-##### Resposta de sucesso: Excluir arquivo
+### Resposta de sucesso: Excluir arquivo
 
 - Código: `204 No Content`
   (Sem conteúdo)
@@ -122,7 +122,7 @@ Remove um arquivo específico.
 
 ---
 
-##### Requisição: Criar diretório
+## Requisição: Criar diretório
 
 **POST** /diretorios/
 
@@ -133,7 +133,7 @@ Remove um arquivo específico.
 }
 ````
 
-###### Erros esperados:
+### Erros esperados:
 
 - Diretório pai não encontrado;
 - Diretório com mesmo nome já existe no diretório pai;
@@ -141,13 +141,13 @@ Remove um arquivo específico.
 
 ---
 
-##### Requisição: Listar conteúdo do diretório
+## Requisição: Listar conteúdo do diretório
 
 **GET** /diretorios/{diretorio-id}
 
 Retorna uma lista de arquivos e subdiretórios em um diretório específico.
 
-##### Resposta de sucesso: Listar conteúdo do diretório
+### Resposta de sucesso: Listar conteúdo do diretório
 
 ````json
 {
@@ -179,14 +179,14 @@ Retorna uma lista de arquivos e subdiretórios em um diretório específico.
 }
 ````
 
-###### Erros esperados:
+### Erros esperados:
 
 - Diretório não encontrado;
 - Falha ao recuperar conteúdo do diretório.
 
 ---
 
-##### Requisição: Gerar link de compartilhamento
+## Requisição: Gerar link de compartilhamento
 
 **POST** /compartilhar/
 
@@ -197,7 +197,7 @@ Retorna uma lista de arquivos e subdiretórios em um diretório específico.
 }
 ````
 
-###### Erros esperados:
+### Erros esperados:
 
 - Arquivo não encontrado;
 - Data de validade inválida;
@@ -207,17 +207,17 @@ Este exemplo apresenta um esboço de documentação para uma API REST de um serv
 
 ---
 
-##### Requisição: Acessar link compartilhado
+## Requisição: Acessar link compartilhado
 
 **GET** /compartilhar/{link-id}
 
 Retorna o arquivo associado a um link de compartilhamento.
 
-##### Resposta de sucesso: Acessar link compartilhado
+### Resposta de sucesso: Acessar link compartilhado
 
 Redireciona para o arquivo ou exibe uma página de visualização.
 
-###### Erros esperados:
+### Erros esperados:
 
 - Link de compartilhamento expirado;
 - Link inválido;
