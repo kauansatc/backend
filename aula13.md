@@ -1,7 +1,3 @@
----
-# marp: true
----
-
 # Casos de uso:
 
 - Manipular arquivos
