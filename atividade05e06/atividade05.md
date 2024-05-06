@@ -199,8 +199,6 @@ Retorna uma lista de arquivos e subdiretórios em um diretório específico.
 - Data de validade inválida;
 - Arquivo não pode ser compartilhado.
 
-Este exemplo apresenta um esboço de documentação para uma API REST de um serviço de armazenamento de arquivos. Cada endpoint descreve uma operação sobre recursos como arquivos, diretórios e compartilhamentos, indicando os dados esperados nas requisições e os possíveis erros que podem ocorrer.
-
 ---
 
 ## Requisição: Acessar link compartilhado
@@ -218,5 +216,3 @@ Redireciona para o arquivo ou exibe uma página de visualização.
 - Link de compartilhamento expirado;
 - Link inválido;
 - Arquivo não disponível para acesso.
-
-Este exemplo detalha as requisições `GET` para obter informações sobre arquivos e diretórios, bem como acessar conteúdo por meio de links compartilhados em uma API REST para um serviço de armazenamento de arquivos. Cada requisição especifica os parâmetros esperados e os possíveis resultados, incluindo as respostas de sucesso e os erros esperados.
