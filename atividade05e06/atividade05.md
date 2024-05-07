@@ -40,6 +40,7 @@
     "nome": "meuarquivo.pdf",
     "conteudo": "dados codificados do arquivo (b64)",
     "diretorio": "/documentos/",
+    "tipo": "pdf"
 }
 ````
 
