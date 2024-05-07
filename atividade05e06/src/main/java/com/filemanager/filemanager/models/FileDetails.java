@@ -13,8 +13,6 @@ public class FileDetails {
         this.dataCriacao = String.valueOf(new Date(System.currentTimeMillis()));
         this.dataModificacao = String.valueOf(new Date(System.currentTimeMillis()));
         this.diretorio = request.getDiretorio();
-        this.linkCompartilhado = "";
-        this.proprietario = "admin";
     }
 
     private String id;
@@ -32,10 +30,6 @@ public class FileDetails {
     private String dataModificacao;
 
     private String diretorio;
-
-    private String linkCompartilhado;
-
-    private String proprietario;
 
     public String getId() {
         return id;
@@ -69,15 +63,11 @@ public class FileDetails {
         return diretorio;
     }
 
-    public String getLinkCompartilhado() {
-        return linkCompartilhado;
-    }
-
-    public String getProprietario() {
-        return proprietario;
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public void setDataModificacao(String dataModificacao) {
+        this.dataModificacao = dataModificacao;
     }
 }
